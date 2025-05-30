@@ -1,11 +1,11 @@
-# 🚀 Node Express TypeScript PostgreSQL API
+# 🚀 Node Express TypeScript MongoDB API
 
 A modular backend API boilerplate using:
 
 - **Node.js**
 - **Express**
 - **TypeScript**
-- **PostgreSQL (via `pg`)**
+- **MongoDB (via `mongoose`)**
 - **Multer** for file uploads
 - **CORS**
 - **Dotenv**
@@ -103,11 +103,8 @@ npm install
 
 ```env
 PORT=5000
-DB_USER=your_db_user
-DB_PASS=your_db_password
-DB_HOST=your_db_host
-DB_PORT=5432
-DB_NAME=your_db_name
+MONGODB_URL=
+DB_NAME=
 ```
 
 ### 4. Start the server
@@ -123,13 +120,6 @@ Runs the app with `nodemon` + `ts-node`.
 ## 🚦 API Endpoints
 
 Base URL: `http://localhost:5000/api`
-
-### 🔹 User Routes
-
-| Method | Endpoint        | Description          |
-|--------|-----------------|----------------------|
-| GET    | `/users`        | Get all users        |
-| POST   | `/users`        | Add a new user       |
 
 ### 🔹 Health Check
 
@@ -161,14 +151,6 @@ npm run start     # run compiled JS (dist/)
 
 ---
 
-## 🧪 Example PostgreSQL Test Command
-
-```bash
-PGPASSWORD=yourpassword psql -h your-host.com -U youruser yourdbname
-```
-
----
-
 ## 📤 Uploading Files (Example)
 
 - Endpoint: `POST /api/upload`
@@ -182,8 +164,8 @@ PGPASSWORD=yourpassword psql -h your-host.com -U youruser yourdbname
 - Node.js
 - Express
 - TypeScript
-- PostgreSQL
-- pg (node-postgres)
+- MongoDB
+- mongoose (node-mongoose)
 - multer
 - dotenv
 - cors
